@@ -1,0 +1,45 @@
+<div class="container">
+  <h2 class="text-center">DELETE SHIFT</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">ShiftId</label>
+      <input type="number" class="form-control" id="id" [(ngModel)]="shift.id" name="id" readonly>
+    </div>
+    <div class="form-group">
+      <label for="gameId">GameId</label>
+      <input type="number" class="form-control" id="gameId" [(ngModel)]="shift.gameId" name="gameId" readonly>
+    </div>
+    <div class="form-group">
+      <label for="shiftNumber">ShiftNumber</label>
+      <input type="number" class="form-control" id="shiftNumber" [(ngModel)]="shift.shiftNumber" name="shiftNumber" readonly>
+    </div>
+    <div class="form-group">
+      <label for="attacker">Attacker</label>
+      <input type="text" class="form-control" id="attacker" [(ngModel)]="shift.attacker" name="attacker" readonly>
+    </div>
+    <div class="form-group">
+      <label for="attackPoints"> Attack Points</label>
+      <input type="number" class="form-control" id="attackPoints" [(ngModel)]="shift.attackPoints" name="attackPoints" readonly>
+    </div>
+    <div class="form-group">
+      <label for="defensePoints"> Defense Points</label>
+      <input type="number" class="form-control" id="defensePoints" [(ngModel)]="shift.defensePoints" name="defensePoints" readonly>
+    </div>
+    <div class="form-group">
+      <label for="damagePoints"> Damage Points</label>
+      <input type="number" class="form-control" id="damagePoints" [(ngModel)]="shift.damagePoints" name="damagePoints" readonly>
+    </div>
+    <div class="form-group">
+      <label for="characterLivePoints"> Character Live Points</label>
+      <input type="number" class="form-control" id="characterLivePoints" [(ngModel)]="shift.characterLivePoints" name="characterLivePoints" readonly>
+    </div>
+    <div class="form-group">
+      <label for="opponentLivePoints"> Character Live Points</label>
+      <input type="number" class="form-control" id="opponentLivePoints" [(ngModel)]="shift.opponentLivePoints" name="opponentLivePoints" readonly>
+    </div>
+
+    <button class="btn btn-danger btn-sm" type="submit">DELETE</button>
+    <button class="btn btn-danger btn-sm" button (click)="redirectToShiftList()" type="submit">BACK</button>
+
+  </form>
+</div>

@@ -1,0 +1,30 @@
+<div class="container pt-6">
+  <h2 class="text-center">PLAYER´S LIST</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Game</th>
+      <th>Win</th>
+      <th>Lost</th>
+      <th>Actions <button (click) = "createPlayer()" class="btn btn btn-danger btn-sm">Create</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let player of players">
+      <td> {{ player.id}} </td>
+      <td> {{ player.name }} </td>
+      <td> {{ player.numberMatches }} </td>
+      <td> {{ player.numberMatchesWon }} </td>
+      <td> {{ player.numberMatchesLost }} </td>
+      <td>
+        <button (click) = "detailPlayer(player.id)" class="btn btn btn-danger btn-sm">READ</button>
+        <button (click) = "updatePlayer(player.id)" class="btn btn btn-danger btn-sm">UPDATE</button>
+        <button (click) = "deletePlayer(player.id)" class="btn btn btn-danger btn-sm">DELETE</button>
+        <button (click) = "choosePlayer(player.id, player.name)" class="btn btn btn-danger btn-sm">CHOOSE</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

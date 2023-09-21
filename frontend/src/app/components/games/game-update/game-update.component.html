@@ -1,0 +1,33 @@
+<div class="container">
+  <h2 class="text-center">UPDATE GAME</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="gameDate">Date</label>
+      <input type="number" class="form-control" id="gameDate" [(ngModel)]="game.gameDate" name="gameDate" readonly>
+    </div>
+    <div class="form-group">
+      <label for="gameTime">Time</label>
+      <input type="number" class="form-control" id="gameTime" [(ngModel)]="game.gameTime" name="gameTime" readonly>
+    </div>
+    <div class="form-group">
+      <label for="gamePlayerName">Player</label>
+      <input type="text" class="form-control" id="gamePlayerName" [(ngModel)]="game.gamePlayerName" name="gamePlayerName">
+    </div>
+    <div class="form-group">
+      <label for="gameCharacterName">Character</label>
+      <input type="text" class="form-control" id="gameCharacterName" [(ngModel)]="game.gameCharacterName" name="gameCharacterName">
+    </div>
+    <div class="form-group">
+      <label for="gameOpponentName">Opponent</label>
+      <input type="text" class="form-control" id="gameOpponentName" [(ngModel)]="game.gameOpponentName" name="gameOpponentName">
+    </div>
+    <div class="form-group">
+      <label for="gameInitiativeName">Initiative</label>
+      <input type="text" class="form-control" id="gameInitiativeName" [(ngModel)]="game.gameInitiativeName" name="gameInitiativeName">
+    </div>
+
+    <button class="btn btn-danger btn-sm" type="submit">UPDATE</button>
+    <button class="btn btn-danger btn-sm" button (click)="redirectToGameList()" type="submit">BACK</button>
+
+  </form>
+</div>

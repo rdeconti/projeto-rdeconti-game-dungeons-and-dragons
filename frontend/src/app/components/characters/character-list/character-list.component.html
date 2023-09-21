@@ -1,0 +1,58 @@
+<div class="container pt-6">
+  <h2 class="text-center">CHARACTER´S LIST</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Live</th>
+      <th>Strength</th>
+      <th>Defense</th>
+      <th>Agility</th>
+      <th>Dice</th>
+      <th>Face</th>
+      <th>Actions <button (click) = "createCharacter()" class="btn btn btn-danger btn-sm">CREATE</button>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let character of characters">
+      <td> {{ character.id }} </td>
+      <td> {{ character.name }} </td>
+      <td> {{ character.type }} </td>
+      <td> {{ character.numberPointLive }} </td>
+      <td> {{ character.numberPointStrength }} </td>
+      <td> {{ character.numberPointDefense }} </td>
+      <td> {{ character.numberPointAgility }} </td>
+      <td> {{ character.quantityDice }} </td>
+      <td> {{ character.quantityFaceDice }} </td>
+      <td>
+        <button (click) = "detailCharacter(character.id)" class="btn btn btn-danger btn-sm">DETAIL</button>
+        <button (click) = "updateCharacter(character.id)" class="btn btn btn-danger btn-sm">UPDATE</button>
+        <button (click) = "deleteCharacter(character.id)" class="btn btn btn-danger btn-sm">DELETE</button>
+        <button (click) = "chooseCharacter(
+            character.id,
+            character.name,
+            character.type,
+            character.numberPointLive,
+            character.numberPointStrength,
+            character.numberPointDefense,
+            character.numberPointAgility,
+            character.quantityDice,
+            character.quantityFaceDice)" class="btn btn btn-danger btn-sm">CHOOSE CHARACTER</button>
+        <button (click) = "chooseOpponent(
+            character.id,
+            character.name,
+            character.type,
+            character.numberPointLive,
+            character.numberPointStrength,
+            character.numberPointDefense,
+            character.numberPointAgility,
+            character.quantityDice,
+            character.quantityFaceDice)" class="btn btn btn-danger btn-sm">CHOOSE OPPONENT</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

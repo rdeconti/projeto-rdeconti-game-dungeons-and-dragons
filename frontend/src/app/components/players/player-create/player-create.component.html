@@ -1,0 +1,25 @@
+<div class="container">
+  <h2 class="text-center">CREATE PLAYER</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="player.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="numberMatches">Games</label>
+      <input type="number" class="form-control" id="numberMatches" [(ngModel)]="player.numberMatches" name="numberMatches">
+    </div>
+    <div class="form-group">
+      <label for="numberMatchesWon">Win</label>
+      <input type="number" class="form-control" id="numberMatchesWon" [(ngModel)]="player.numberMatchesWon" name="numberMatchesWon">
+    </div>
+    <div class="form-group">
+      <label for="numberMatchesLost">Lost</label>
+      <input type="number" class="form-control" id="numberMatchesLost" [(ngModel)]="player.numberMatchesLost" name="numberMatchesLost">
+    </div>
+
+    <button class="btn btn-danger btn-sm" type="submit">CREATE</button>
+    <button class="btn btn-danger btn-sm" button (click)="redirectToPlayerList()" type="submit">BACK</button>
+
+  </form>
+</div>

@@ -1,0 +1,37 @@
+<div class="container pt-6">
+  <h2 class="text-center">SHIFT´S LIST</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>shiftId</th>
+      <th>gameId</th>
+      <th>shiftNumber</th>
+      <th>attacker</th>
+      <th>attackPoints</th>
+      <th>defensePoints</th>
+      <th>damagePoints</th>
+      <th>characterLivePoints</th>
+      <th>opponentLivePoints</th>
+      <th>Actions <button (click) = "createShift()" class="btn btn btn-danger btn-sm">CREATE</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let shift of shifts">
+      <td> {{ shift.id }} </td>
+      <td> {{ shift.gameId }} </td>
+      <td> {{ shift.shiftNumber }} </td>
+      <td> {{ shift.attacker }} </td>
+      <td> {{ shift.attackPoints }} </td>
+      <td> {{ shift.defensePoints }} </td>
+      <td> {{ shift.damagePoints }} </td>
+      <td> {{ shift.characterLivePoints }} </td>
+      <td> {{ shift.opponentLivePoints }} </td>
+      <td>
+        <button (click) = "detailShift(shift.id)" class="btn btn btn-danger btn-sm">DETAIL</button>
+        <button (click) = "updateShift(shift.id)" class="btn btn btn-danger btn-sm">UPDATE</button>
+        <button (click) = "deleteShift(shift.id)" class="btn btn btn-danger btn-sm">DELETE</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

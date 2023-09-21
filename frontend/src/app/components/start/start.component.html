@@ -1,0 +1,107 @@
+<div class="container-fluid">
+  <div class="row">
+    <a class="btn btn btn-outline-primary btn-lg" button (click)="resetGame()" >Reset Game</a>
+  </div>
+  <div class="row">
+    <div class="col-8 bg-primary p-4">
+      <!-- ROW 1 -->
+      <div class="row">
+        <div class="col-sm-4 p-2">
+          <div class="card text-center">
+            <div class="card-header">
+              <h5 class="card-title">Step 1: Who is the PLAYER ?</h5>
+            </div>
+            <div class="card-body">
+              <a class="btn btn btn-outline-primary btn-lg" button (click)="whoIsThePlayer()" >Define Player</a>
+            </div>
+            <div class="card-footer">
+              <h6>Player is: {{currentPlayerName}} ({{currentPlayerId}})</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 p-2">
+          <div class="card text-center">
+            <div class="card-header">
+              <h5 class="card-title">Step 2: Who is your CHARACTER ?</h5>
+            </div>
+            <div class="card-body">
+              <a class="btn btn btn-outline-primary btn-lg" button (click)="whoIsYourCharacter()" >Define Character</a>
+            </div>
+            <div class="card-footer">
+              <h6>Character is: {{currentYourCharacterName}} ({{currentYourCharacterId}})</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 p-2">
+          <div class="card text-center">
+            <div class="card-header">
+              <h5 class="card-title">Step 3: Who is your OPPONENT ?</h5>
+            </div>
+            <div class="card-body">
+              <a class="btn btn btn-outline-primary btn-lg" button (click)="whoIsYourOpponent()" >Define Opponent</a>
+            </div>
+            <div class="card-footer">
+              <h6>Opponent is: {{currentYourOpponentName}} ({{currentYourOpponentId}})</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ROW 2 -->
+      <div class="row">
+        <div class="col-sm-4 p-2">
+          <div class="card text-center">
+            <div class="card-header">
+              <h5 class="card-title">Step 4: Who START the GAME ?</h5>
+            </div>
+            <div class="card-body">
+              <a class="btn btn btn-outline-primary btn-lg" button (click)="whoStartGame()" >Define Start</a>
+            </div>
+            <div class="card-footer">
+              <h6>Who started the game was: {{currentWhoDoesAttack}} </h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 p-2">
+          <div class="card text-center">
+            <div class="card-header">
+              <h5 class="card-title">Step 5: What is the GAME ?</h5>
+            </div>
+            <div class="card-body">
+              <a class="btn btn btn-outline-primary btn-lg" button (click)="whatIsTheGame()" >Define Game</a>
+            </div>
+            <div class="card-footer">
+              <h6>Game is: {{currentGameId}}</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 p-2">
+          <div class="card text-center">
+            <div class="card-header">
+              <h5 class="card-title">Step 6: PLAY SHIFTS</h5>
+            </div>
+            <div class="card-body">
+              <a class="btn btn btn-outline-primary btn-lg" button (click)="playShift()" >Play Shift</a>
+            </div>
+            <div class="card-footer">
+              <h6>Shift number is: {{currentShiftId}} </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 bg-primary text-white p-4">
+       <div class="row text-center">
+        <h4>Live Points</h4>
+        <img class="mx-auto d-block" style="max-width:20%" src="../.././../assets/images/heart.png" alt="Lives">
+      </div>
+      <div class="row text-center">
+        <h6>Shift number: {{currentShiftId}}</h6>
+        <h6>Attacker is : {{currentWhoDoesAttack}}</h6>
+        <h6>Character : {{currentYourCharacterName}} is a {{currentYourCharacterType}}</h6>
+        <h6>Character life points : {{currentYourCharacterNumberPointsLive}}</h6>
+        <h6>Opponent : {{currentYourOpponentName}} is a {{currentYourOpponentType}}</h6>
+        <h6>Opponent life points : {{currentYourOpponentNumberPointsLive}}</h6>
+      </div>
+    </div>
+  </div>
+</div>

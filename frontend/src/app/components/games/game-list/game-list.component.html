@@ -1,0 +1,34 @@
+<div class="container pt-6">
+  <h2 class="text-center">GAME´S LIST</h2>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Player</th>
+      <th>Character</th>
+      <th>Opponent</th>
+      <th>Initiative</th>
+      <th>Actions <button (click) = "createGame()" class="btn btn btn-danger btn-sm">CREATE</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let game of games">
+      <td> {{ game.id }} </td>
+      <td> {{ game.gameDate }} </td>
+      <td> {{ game.gameTime }} </td>
+      <td> {{ game.gamePlayerName }} </td>
+      <td> {{ game.gameCharacterName }} </td>
+      <td> {{ game.gameOpponentName }} </td>
+      <td> {{ game.gameInitiativeName }} </td>
+      <td>
+        <button (click) = "detailGame(game.id)" class="btn btn btn-danger btn-sm">READ</button>
+        <button (click) = "updateGame(game.id)" class="btn btn btn-danger btn-sm">UPDATE</button>
+        <button (click) = "deleteGame(game.id)" class="btn btn btn-danger btn-sm">DELETE</button>
+        <button (click) = "chooseGame(game.id)" class="btn btn btn-danger btn-sm">CHOOSE GAME</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

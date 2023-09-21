@@ -1,0 +1,18 @@
+.btn-danger {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  margin-left: 4px !important;
+}
+
+a:link, a:visited {
+  font-size: 20px;
+  color:#000;
+	text-decoration: none
+}
+a:hover {
+	text-decoration: underline;
+	color: #f00
+}
+a:active {
+	text-decoration: none
+}
